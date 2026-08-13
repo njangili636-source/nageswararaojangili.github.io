@@ -12,50 +12,84 @@
             padding: 0;
             box-sizing: border-box;
             scroll-behavior: smooth;
-            font-family: Arial, sans-serif;
         }
 
         body {
-            background: #f5f7fa;
-            color: #222;
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #1f2937;
+            line-height: 1.6;
         }
 
+        /* NAVIGATION */
+
         header {
+            background: #111827;
+            color: white;
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: #111827;
-            padding: 18px 8%;
+        }
+
+        nav {
+            max-width: 1150px;
+            margin: auto;
+            padding: 18px 25px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo {
+            font-size: 25px;
+            font-weight: bold;
             color: #38bdf8;
-            font-size: 24px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
             font-weight: bold;
         }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 25px;
-            font-size: 16px;
-        }
-
-        nav a:hover {
+        nav ul li a:hover {
             color: #38bdf8;
         }
+
+        /* COMMON */
+
+        section {
+            max-width: 1150px;
+            margin: auto;
+            padding: 80px 25px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 35px;
+            margin-bottom: 40px;
+            color: #111827;
+        }
+
+        /* HOME */
 
         #home {
             min-height: 90vh;
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 40px 8%;
-            background: linear-gradient(135deg, #e0f2fe, #f8fafc);
+            gap: 50px;
+        }
+
+        .home-content {
+            flex: 1;
         }
 
         .home-content h1 {
@@ -68,167 +102,187 @@
         }
 
         .home-content h2 {
-            font-size: 25px;
-            color: #555;
-            margin-bottom: 20px;
+            color: #475569;
+            margin-bottom: 15px;
         }
 
         .home-content p {
-            max-width: 650px;
-            margin: auto;
             font-size: 18px;
-            line-height: 1.7;
+            color: #64748b;
+            max-width: 650px;
         }
 
-        .btn {
+        .profile-pic {
+            width: 260px;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 7px solid white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .button {
             display: inline-block;
             margin-top: 25px;
-            padding: 12px 25px;
+            padding: 13px 25px;
             background: #0284c7;
             color: white;
             text-decoration: none;
-            border-radius: 6px;
+            border-radius: 8px;
+            font-weight: bold;
         }
 
-        .btn:hover {
+        .button:hover {
             background: #0369a1;
         }
 
-        section {
-            padding: 70px 8%;
-        }
+        /* ABOUT */
 
-        section h2 {
-            text-align: center;
-            font-size: 32px;
-            color: #0284c7;
-            margin-bottom: 35px;
-        }
-
-        .about-content {
-            max-width: 800px;
-            margin: auto;
-            text-align: center;
-            font-size: 18px;
-            line-height: 1.8;
-        }
-
-        .education {
+        .about-box {
             background: white;
-        }
-
-        .education-box {
-            max-width: 800px;
-            margin: auto;
-            padding: 25px;
-            background: #f1f5f9;
-            border-left: 5px solid #0284c7;
-            border-radius: 8px;
-        }
-
-        .education-box h3 {
-            margin-bottom: 8px;
-        }
-
-        .skills-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        .skill {
-            background: #111827;
-            color: white;
-            padding: 12px 22px;
-            border-radius: 25px;
-            font-size: 16px;
-        }
-
-        .projects {
-            background: white;
-        }
-
-        .project-container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 25px;
-        }
-
-        .project-card {
-            width: 320px;
-            padding: 25px;
-            background: #f8fafc;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-        }
-
-        .project-card h3 {
-            color: #0284c7;
-            margin-bottom: 12px;
-        }
-
-        .project-card p {
-            line-height: 1.6;
-        }
-
-        .certificate-box {
-            max-width: 800px;
-            margin: auto;
-            text-align: center;
-            line-height: 1.8;
-        }
-
-        .contact {
-            background: #e0f2fe;
-            text-align: center;
-        }
-
-        .contact p {
-            margin: 12px;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
             font-size: 17px;
         }
 
-        .contact a {
+        /* CARDS */
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .card h3 {
+            color: #0284c7;
+            margin-bottom: 10px;
+        }
+
+        /* SKILLS */
+
+        .skills-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .skill {
+            display: inline-block;
+            padding: 10px 17px;
+            margin: 7px;
+            background: #e0f2fe;
+            color: #075985;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+
+        /* CERTIFICATES */
+
+        .certificates {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .certificate-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .certificate-card img {
+            width: 100%;
+            height: 350px;
+            object-fit: contain;
+            background: #f1f5f9;
+            display: block;
+        }
+
+        .certificate-info {
+            padding: 20px;
+        }
+
+        .certificate-info h3 {
+            color: #0284c7;
+            margin-bottom: 8px;
+        }
+
+        /* CONTACT */
+
+        .contact-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .contact-box p {
+            margin: 15px 0;
+            font-size: 17px;
+        }
+
+        .contact-box a {
             color: #0284c7;
             text-decoration: none;
             font-weight: bold;
         }
 
-        .contact a:hover {
+        .contact-box a:hover {
             text-decoration: underline;
         }
+
+        /* FOOTER */
 
         footer {
             background: #111827;
             color: white;
             text-align: center;
-            padding: 20px;
+            padding: 25px;
         }
 
-        @media (max-width: 768px) {
+        /* MOBILE */
 
-            header {
+        @media (max-width: 750px) {
+
+            nav {
                 flex-direction: column;
                 gap: 15px;
             }
 
-            nav a {
-                margin: 0 7px;
-                font-size: 14px;
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            #home {
+                flex-direction: column-reverse;
+                text-align: center;
+                justify-content: center;
             }
 
             .home-content h1 {
-                font-size: 35px;
+                font-size: 38px;
             }
 
-            .home-content h2 {
-                font-size: 20px;
+            .profile-pic {
+                width: 210px;
+                height: 210px;
             }
 
-            .project-card {
-                width: 100%;
+            section {
+                padding: 60px 18px;
             }
         }
     </style>
@@ -236,221 +290,76 @@
 
 <body>
 
-    <!-- Navigation -->
-    <header>
+<!-- ================= NAVIGATION ================= -->
+
+<header>
+
+    <nav>
 
         <div class="logo">
             Nageswara Rao
         </div>
 
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#education">Education</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#certificates">Certificates</a>
-            <a href="#contact">Contact</a>
-        </nav>
+        <ul>
 
-    </header>
+            <li>
+                <a href="#home">Home</a>
+            </li>
 
+            <li>
+                <a href="#about">About</a>
+            </li>
 
-    <!-- Home -->
-    <section id="home">
+            <li>
+                <a href="#education">Education</a>
+            </li>
 
-        <div class="home-content">
+            <li>
+                <a href="#skills">Skills</a>
+            </li>
 
-            <h1>Hello, I'm <span>Nageswara Rao</span></h1>
+            <li>
+                <a href="#projects">Projects</a>
+            </li>
 
-            <h2>B.Tech CSE Student</h2>
+            <li>
+                <a href="#certificates">Certificates</a>
+            </li>
 
-            <p>
-                Welcome to my personal portfolio website.
-                I am passionate about programming, web development,
-                technology and building useful projects.
-            </p>
+            <li>
+                <a href="#contact">Contact</a>
+            </li>
 
-            <a href="#about" class="btn">Explore My Portfolio</a>
+        </ul>
 
-        </div>
+    </nav>
 
-    </section>
-
-
-    <!-- About -->
-    <section id="about">
-
-        <h2>About Me</h2>
-
-        <div class="about-content">
-
-            <p>
-                I am a B.Tech Computer Science and Engineering student.
-                I am interested in programming, web development,
-                data science and emerging technologies.
-                I continuously work on improving my technical skills
-                and building practical projects.
-            </p>
-
-        </div>
-
-    </section>
+</header>
 
 
-    <!-- Education -->
-    <section id="education" class="education">
+<!-- ================= HOME ================= -->
 
-        <h2>Education</h2>
+<section id="home">
 
-        <div class="education-box">
+    <div class="home-content">
 
-            <h3>B.Tech - Computer Science & Engineering</h3>
+        <h1>
+            Hello, I'm
+            <span>Nageswara Rao</span>
+        </h1>
 
-            <p>
-                Sai University, Chennai
-            </p>
-
-            <p>
-                Currently pursuing my Bachelor's degree.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- Skills -->
-    <section id="skills">
-
-        <h2>My Skills</h2>
-
-        <div class="skills-container">
-
-            <div class="skill">HTML</div>
-            <div class="skill">CSS</div>
-            <div class="skill">JavaScript</div>
-            <div class="skill">Python</div>
-            <div class="skill">SQL</div>
-            <div class="skill">Git & GitHub</div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Projects -->
-    <section id="projects" class="projects">
-
-        <h2>My Projects</h2>
-
-        <div class="project-container">
-
-            <div class="project-card">
-
-                <h3>Nag Stay Hotel</h3>
-
-                <p>
-                    A responsive hotel website designed using
-                    HTML and CSS. The website presents hotel
-                    information, rooms and services in a
-                    user-friendly design.
-                </p>
-
-            </div>
-
-
-            <div class="project-card">
-
-                <h3>Python Project</h3>
-
-                <p>
-                    A Python-based project developed to improve
-                    programming, logical thinking and
-                    problem-solving skills.
-                </p>
-
-            </div>
-
-
-            <div class="project-card">
-
-                <h3>Personal Portfolio</h3>
-
-                <p>
-                    A personal portfolio website created using
-                    HTML and CSS to showcase my education,
-                    skills and projects.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- Certificates -->
-    <section id="certificates">
-
-        <h2>Certificates & Achievements</h2>
-
-        <div class="certificate-box">
-
-            <p>
-                I am continuously participating in courses,
-                workshops and technology-related activities
-                to improve my knowledge and skills.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- Contact -->
-    <section id="contact" class="contact">
-
-        <h2>Contact Me</h2>
+        <h2>
+            B.Tech CSE Student
+        </h2>
 
         <p>
-            📧 Email:
-            <a href="mailto:njangili637@gmail.com">
-                njangili637@gmail.com
-            </a>
+            Welcome to my personal portfolio website.
+            I am passionate about programming, web development,
+            data science, and building useful technology projects.
         </p>
 
-        <p>
-            💻 GitHub:
-            <a href="https://github.com/njangili636-source"
-               target="_blank">
-                njangili636-source
-            </a>
-        </p>
+        <a href="#projects" class="button">
+            Explore My Portfolio
+        </a>
 
-        <p>
-            🔗 LinkedIn:
-            <a href="https://www.linkedin.com/in/nageswara-rao-jangili-28b653374"
-               target="_blank">
-                Nageswara Rao Jangili
-            </a>
-        </p>
-
-        <p>
-            GitHub Profile: njangili636-source · he/him
-        </p>
-
-    </section>
-
-
-    <!-- Footer -->
-    <footer>
-
-        <p>
-            © 2026 Nageswara Rao | Personal Portfolio
-        </p>
-
-    </footer>
-
-</body>
-</html>
+    </div>
