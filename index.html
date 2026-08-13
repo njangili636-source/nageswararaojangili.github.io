@@ -1,10 +1,456 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nageswara Rao | Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #f5f7fa;
+            color: #222;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #111827;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: #38bdf8;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 16px;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        #home {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 8%;
+            background: linear-gradient(135deg, #e0f2fe, #f8fafc);
+        }
+
+        .home-content h1 {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        .home-content h1 span {
+            color: #0284c7;
+        }
+
+        .home-content h2 {
+            font-size: 25px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        .home-content p {
+            max-width: 650px;
+            margin: auto;
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            background: #0284c7;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .btn:hover {
+            background: #0369a1;
+        }
+
+        section {
+            padding: 70px 8%;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 32px;
+            color: #0284c7;
+            margin-bottom: 35px;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .education {
+            background: white;
+        }
+
+        .education-box {
+            max-width: 800px;
+            margin: auto;
+            padding: 25px;
+            background: #f1f5f9;
+            border-left: 5px solid #0284c7;
+            border-radius: 8px;
+        }
+
+        .education-box h3 {
+            margin-bottom: 8px;
+        }
+
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .skill {
+            background: #111827;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 25px;
+            font-size: 16px;
+        }
+
+        .projects {
+            background: white;
+        }
+
+        .project-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .project-card {
+            width: 320px;
+            padding: 25px;
+            background: #f8fafc;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        .project-card h3 {
+            color: #0284c7;
+            margin-bottom: 12px;
+        }
+
+        .project-card p {
+            line-height: 1.6;
+        }
+
+        .certificate-box {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            line-height: 1.8;
+        }
+
+        .contact {
+            background: #e0f2fe;
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 12px;
+            font-size: 17px;
+        }
+
+        .contact a {
+            color: #0284c7;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 14px;
+            }
+
+            .home-content h1 {
+                font-size: 35px;
+            }
+
+            .home-content h2 {
+                font-size: 20px;
+            }
+
+            .project-card {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Welcome to My Website!</h1>
-    <p>My GitHub Pages website is working.</p>
+
+    <!-- Navigation -->
+    <header>
+
+        <div class="logo">
+            Nageswara Rao
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#certificates">Certificates</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Home -->
+    <section id="home">
+
+        <div class="home-content">
+
+            <h1>Hello, I'm <span>Nageswara Rao</span></h1>
+
+            <h2>B.Tech CSE Student</h2>
+
+            <p>
+                Welcome to my personal portfolio website.
+                I am passionate about programming, web development,
+                technology and building useful projects.
+            </p>
+
+            <a href="#about" class="btn">Explore My Portfolio</a>
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section id="about">
+
+        <h2>About Me</h2>
+
+        <div class="about-content">
+
+            <p>
+                I am a B.Tech Computer Science and Engineering student.
+                I am interested in programming, web development,
+                data science and emerging technologies.
+                I continuously work on improving my technical skills
+                and building practical projects.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Education -->
+    <section id="education" class="education">
+
+        <h2>Education</h2>
+
+        <div class="education-box">
+
+            <h3>B.Tech - Computer Science & Engineering</h3>
+
+            <p>
+                Sai University, Chennai
+            </p>
+
+            <p>
+                Currently pursuing my Bachelor's degree.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Skills -->
+    <section id="skills">
+
+        <h2>My Skills</h2>
+
+        <div class="skills-container">
+
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Python</div>
+            <div class="skill">SQL</div>
+            <div class="skill">Git & GitHub</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Projects -->
+    <section id="projects" class="projects">
+
+        <h2>My Projects</h2>
+
+        <div class="project-container">
+
+            <div class="project-card">
+
+                <h3>Nag Stay Hotel</h3>
+
+                <p>
+                    A responsive hotel website designed using
+                    HTML and CSS. The website presents hotel
+                    information, rooms and services in a
+                    user-friendly design.
+                </p>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>Python Project</h3>
+
+                <p>
+                    A Python-based project developed to improve
+                    programming, logical thinking and
+                    problem-solving skills.
+                </p>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <h3>Personal Portfolio</h3>
+
+                <p>
+                    A personal portfolio website created using
+                    HTML and CSS to showcase my education,
+                    skills and projects.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Certificates -->
+    <section id="certificates">
+
+        <h2>Certificates & Achievements</h2>
+
+        <div class="certificate-box">
+
+            <p>
+                I am continuously participating in courses,
+                workshops and technology-related activities
+                to improve my knowledge and skills.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+
+        <h2>Contact Me</h2>
+
+        <p>
+            📧 Email:
+            <a href="mailto:njangili637@gmail.com">
+                njangili637@gmail.com
+            </a>
+        </p>
+
+        <p>
+            💻 GitHub:
+            <a href="https://github.com/njangili636-source"
+               target="_blank">
+                njangili636-source
+            </a>
+        </p>
+
+        <p>
+            🔗 LinkedIn:
+            <a href="https://www.linkedin.com/in/nageswara-rao-jangili-28b653374"
+               target="_blank">
+                Nageswara Rao Jangili
+            </a>
+        </p>
+
+        <p>
+            GitHub Profile: njangili636-source · he/him
+        </p>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 Nageswara Rao | Personal Portfolio
+        </p>
+
+    </footer>
+
 </body>
 </html>
